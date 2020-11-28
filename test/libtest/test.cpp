@@ -12,15 +12,15 @@ Test::~Test()
 
 int Test::execute()
 {
-	int ret;
+        int ret;
 
-	ret = init();
-	if (ret)
-		return ret;
+        ret = init();
+        if (ret)
+                return ret;
 
-	ret = run();
+        ret = run();
 
-	cleanup();
+        cleanup();
 
-	return ret;
+        return ret;
 }

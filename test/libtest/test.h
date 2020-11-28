@@ -4,29 +4,29 @@
 #include <sstream>
 
 enum TestStatus {
-	TestPass = 0,
-	TestFail = -1,
-	TestSkip = 77,
+        TestPass = 0,
+        TestFail = -1,
+        TestSkip = 77,
 };
 
 class Test
 {
 public:
-	Test();
-	virtual ~Test();
+        Test();
+        virtual ~Test();
 
-	int execute();
+        int execute();
 
 protected:
-	virtual int init() { return 0; }
-	virtual int run() = 0;
-	virtual void cleanup() {}
+        virtual int init() { return 0; }
+        virtual int run() = 0;
+        virtual void cleanup() {}
 };
 
-#define TEST_REGISTER(klass)						\
-int main([[maybe_unused]] int argc, [[maybe_unused]] char *argv[])	\
-{									\
-	return klass().execute();					\
+#define TEST_REGISTER(klass)                                                \
+int main([[maybe_unused]] int argc, [[maybe_unused]] char *argv[])        \
+{                                                                        \
+        return klass().execute();                                        \
 }
 
 #endif /* __TEST_TEST_H__ */
