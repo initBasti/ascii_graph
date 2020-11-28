@@ -1,0 +1,4 @@
+option('test',
+        type : 'boolean',
+        description: 'Compile and include the tests')
+
